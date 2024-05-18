@@ -1,0 +1,30 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="More than limit project" verbose="1" parallel="tests" thread-count="2">
+    <test name="First Test"  >
+<!--        <parameter name="deviceName" value="sdk_gphone_x86"></parameter>-->
+        <parameter name="UDID" value="emulator-5556"></parameter>
+        <parameter name="portNumber" value="5556"></parameter>
+        <classes>
+            <class name="com.trinhthianh.testcases.MyProjectsTest">
+                <methods>
+                    <include name="testAddNewProject" />
+                </methods>
+            </class>
+
+        </classes>
+    </test>
+
+    <test name="Second test"  >
+<!--        <parameter name="deviceName" value="sdk_gphone_x86"></parameter>-->
+        <parameter name="UDID" value="emulator-5554"></parameter>
+        <parameter name="portNumber" value="5554"></parameter>
+        <classes>
+            <class name="com.trinhthianh.testcases.MyProjectsTest">
+                <methods>
+                    <include name="testAddNewProject" />
+                </methods>
+            </class>
+
+        </classes>
+    </test>
+</suite>
